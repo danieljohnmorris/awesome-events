@@ -1,9 +1,11 @@
-Feature: something something
-  In order to something something
-  A user something something
-  something something something
+Feature: List events for an Upcoming group
+  In order ingest new events 
+  As an events subscriber
+  I want to list all events for a group
 
-  Scenario: something something
-    Given inspiration
-    When I create a sweet new gem
-    Then everyone should see how awesome I am
+  Scenario: List Upcoming events for GeekUp
+    Given I know GeekUp's upcoming id
+	And I know my Upcoming api key
+    When I create a group object
+	And I call Upcoming api: group.getEvents 
+    Then I see a list of ruby xml objects
