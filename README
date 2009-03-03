@@ -1,5 +1,37 @@
-awesome-events==============
-Description goes here.
+AWESOME EVENTS
+=========
+API wrapper for subscribing/publishing to Upcoming/Facebook events.
+
+Homepage:  http://github.com/danieljohnmorris/awesome-events/tree/master
+Contact:   Daniel Morris <daniel.john.morris@googlemail.com>
+
+
+DEPENDENCIES
+=========
+
+gems:
+	rubygems
+	hpricot
+
+
+INSTRUCTIONS
+=========
+
+# require the gem to get started
+require 'awesome-events'
+
+# recommended so you don't have to type full namespace each time
+include AwesomeEvents
+
+# setup with api-key and upcoming group-id
+group = Upcoming::Group.new(:api_key => @api_key, :id => @group_id)
+
+# list events in the future, as Hpricot::Doc
+events = group.fetch_events(:tense => :upcoming)
+
+# list events in the past, as Hpricot::Doc
+events = group.fetch_events(:tense => :upcoming)
+
 
 COPYRIGHT
 =========
