@@ -23,13 +23,3 @@ end
 Then /^I see a list of ruby xml objects$/ do
   @events.children.length > 0
 end
-
-### Error handling when trying to list with incorrect group id
-
-Given /^I enter an incorrect group id$/ do
-  @group_id = 45645645645645646
-end
-
-Then /^an exception is raised$/ do
-  
-end
