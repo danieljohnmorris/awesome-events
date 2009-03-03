@@ -1,6 +1,7 @@
 module AwesomeEvents
   module Upcoming
     class Group
+      attr_accessor :id, :api_key
     
       def initialize(options = {})
         @id = options[:id] if options[:id]
