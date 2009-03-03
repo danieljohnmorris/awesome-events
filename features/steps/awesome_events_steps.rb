@@ -1,4 +1,4 @@
-### Scenario: List Upcoming events for GeekUp
+### Scenario: List upcoming events for GeekUp
 
 Given /^I know GeekUp's upcoming id$/ do
   @group_id = 1479
@@ -12,7 +12,7 @@ When /^I create a group object$/ do
   @group = Upcoming::Group.new(:api_key => @api_key, :id => @group_id)
 end
 
-When /^I call Upcoming api: group\.getEvents$/ do
+When /^I lookup group's upcoming events$/ do
   @events = @group.fetch_events(:tense => :upcoming)
 end
 
@@ -22,4 +22,10 @@ end
 
 Then /^I see a list of ruby xml objects$/ do
   @events.children.length > 0
+end
+
+### Scenario: List past events for GeekUp
+
+When /^I lookup group's past events$/ do
+  @events = @group.fetch_events(:tense => :past)
 end
