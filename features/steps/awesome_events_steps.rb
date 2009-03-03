@@ -1,3 +1,5 @@
+### Scenario: List Upcoming events for GeekUp
+
 Given /^I know GeekUp's upcoming id$/ do
   @group_id = 1479
 end
@@ -14,7 +16,20 @@ When /^I call Upcoming api: group\.getEvents$/ do
   @events = @group.fetch_events(:tense => :upcoming)
 end
 
+Then /^the returned value is an hpricot xml object$/ do
+  Hpricot::Doc == @events.class
+end
+
 Then /^I see a list of ruby xml objects$/ do
-  puts @events
-  !@events.empty?
+  @events.children.length > 0
+end
+
+### Error handling when trying to list with incorrect group id
+
+Given /^I enter an incorrect group id$/ do
+  @group_id = 45645645645645646
+end
+
+Then /^an exception is raised$/ do
+  
 end
