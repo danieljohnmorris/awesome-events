@@ -9,5 +9,3 @@ require 'hpricot'
 # lib
 require 'util/util'
 require 'upcoming/group'
-
-include AwesomeEvents
