@@ -12,7 +12,7 @@ module AwesomeEvents
         url = "http://upcoming.yahooapis.com/services/rest/?api_key=#{@api_key}&method=group.getEvents&group_id=#{@id}"
         url << "&show_past=1" if options[:tense] == :past
   
-        AwesomeEvents::Util.get(url)
+        RestClient.get(url)
       end
     end
   end

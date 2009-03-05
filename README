@@ -12,12 +12,20 @@ DEPENDENCIES
 gems:
 	rubygems
 	hpricot
+	rest-client
+	
+INSTALL
+=========
+
+gem sources -a http://gems.github.com
+sudo gem install danieljohnmorris-awesome-events
 
 
 INSTRUCTIONS
 =========
 
 # require the gem to get started
+gem 'danieljohnmorris-awesome-events'
 require 'awesome-events'
 
 # recommended so you don't have to type full namespace each time

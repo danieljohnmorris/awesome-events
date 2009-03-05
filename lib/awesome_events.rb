@@ -5,7 +5,8 @@ $:.unshift(File.dirname(__FILE__)) unless
 require 'rubygems'
 require 'open-uri'
 require 'hpricot'
-
+require 'rest_client'
+  
 # lib
 require 'util/util'
 require 'upcoming/group'
