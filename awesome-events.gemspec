@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Daniel Morris"]
-  s.date = %q{2009-03-03}
+  s.date = %q{2009-03-05}
   s.description = %q{TODO}
   s.email = %q{daniel.john.morris@googlemail.com}
   s.files = ["VERSION.yml", "lib/awesome_events.rb", "lib/upcoming", "lib/upcoming/group.rb", "lib/util", "lib/util/util.rb", "test/awesome_events_test.rb", "test/test_helper.rb"]
