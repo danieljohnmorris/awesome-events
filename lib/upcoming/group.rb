@@ -1,7 +1,7 @@
 module AwesomeEvents
   module Upcoming
     class Group
-      attr_accessor :id, :api_key
+      attr_accessor :id
     
       def initialize(options = {})
         @id = options[:id] if options[:id]
@@ -10,8 +10,7 @@ module AwesomeEvents
     
       def fetch_events(options = {:tense => :upcoming})
         url = "http://upcoming.yahooapis.com/services/rest/?api_key=#{@api_key}&method=group.getEvents&group_id=#{@id}"
-        url << "&show_past=1" if options[:tense] == :past
-  
+        url << "&show_past=1" if options[:tense] == :past  
         RestClient.get(url)
       end
     end

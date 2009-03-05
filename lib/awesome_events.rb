@@ -8,5 +8,6 @@ require 'hpricot'
 require 'rest_client'
   
 # lib
-require 'util/util'
+require 'util'
+require 'upcoming'
 require 'upcoming/group'
