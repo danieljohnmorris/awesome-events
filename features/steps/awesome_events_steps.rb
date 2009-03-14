@@ -9,7 +9,8 @@ Given /^I know my Upcoming api key$/ do
 end
 
 When /^I create a group object$/ do
-  @group = AwesomeEvents::Upcoming::Group.new(:api_key => @api_key, :id => @group_id)
+  @config = AwesomeEvents::Upcoming::Config.new(:api_key => @api_key)
+  @group = AwesomeEvents::Upcoming::Group.new(:id => @group_id, :config => @config)
 end
 
 When /^I lookup group's upcoming events$/ do
