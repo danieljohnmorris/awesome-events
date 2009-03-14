@@ -12,7 +12,8 @@ module AwesomeEvents
         url = "#{UPCOMING_API_URL}?api_key=#{@config.api_key}&method=group.getEvents&group_id=#{@id}"
         url << "&show_past=1" if options[:tense] == :past  
         puts url
-        RestClient.get(url)
+        
+        doc = Hpricot(RestClient.get(url))
       end
     end
   end
