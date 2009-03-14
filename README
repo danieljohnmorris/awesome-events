@@ -26,13 +26,14 @@ INSTRUCTIONS
 
 # require the gem to get started
 gem 'danieljohnmorris-awesome-events'
-require 'awesome-events'
+require 'awesome_events'
 
 # recommended so you don't have to type full namespace each time
 include AwesomeEvents
 
 # setup with api-key and upcoming group-id
-group = Upcoming::Group.new(:api_key => @api_key, :id => @group_id)
+conf = AwesomeEvents::Upcoming::Config.new(:api_key => "YOURAPIKEY")
+group = AwesomeEvents::Upcoming::Group.new(:id => YOURGROUPID, :config => conf)
 
 # list events in the future, as Hpricot::Doc
 events = group.fetch_events(:tense => :upcoming)
