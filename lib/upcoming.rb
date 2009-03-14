@@ -1,5 +1,6 @@
 module AwesomeEvents
   module Upcoming
-    attr_accessor :api_key, :token
+    UPCOMING_API_URL = "http://upcoming.yahooapis.com/services/rest/"
+
   end
 end

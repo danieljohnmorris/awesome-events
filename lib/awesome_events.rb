@@ -10,4 +10,5 @@ require 'rest_client'
 # lib
 require 'util'
 require 'upcoming'
+require 'upcoming/config'
 require 'upcoming/group'
